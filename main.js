@@ -1,3 +1,5 @@
+//set compChoice to function, call function in "on click" event
+
 var choiceArr = ["rock", "paper", "scissors"];
 
 var compChoice = choiceArr[Math.floor(Math.random() * choiceArr.length)]
@@ -13,17 +15,9 @@ $('.button').click(function(){
   if(userChoice === compChoice) {
     $(".output").text("It's a tie!");
   }
-  else if (compChoice === "rock" && userChoice === "paper") {
+  else if (compChoice === "rock" && userChoice === "paper" || compChoice === "paper" && userChoice === "scissors" || compChoice === "scissor" && userChoice === "rock") {
     $(".output").text("You win!");
     wins += 1;
-  }
-  else if (compChoice === "paper" && userChoice === "scissors") {
-    $(".output").text("You win!");
-    wins += 1;;
-  }
-  else if (compChoice === "scissor" && userChoice === "rock") {
-    $(".output").text("You win!");
-    wins += 1;;
   }
   else {
     $(".output").text("You lose!");
