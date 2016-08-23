@@ -1,17 +1,18 @@
 //set compChoice to function, call function in "on click" event
 
 var choiceArr = ["rock", "paper", "scissors"];
-
-var compChoice = choiceArr[Math.floor(Math.random() * choiceArr.length)]
-var userChoice;
-
 var wins = 0;
 var loses = 0;
 
+function generate() {
+  return choiceArr[Math.floor(Math.random() * choiceArr.length)]
+}
+
 $('.button').click(function(){
-  userChoice = $(this).val();
-  console.log(userChoice);
-  $(".output").text("The computer chooses " + compChoice);
+  var userChoice = $(this).val();
+  var compChoice = generate();
+  $(".selection").text("You chose " + userChoice + " // Your opponent chose " + compChoice);
+
   if(userChoice === compChoice) {
     $(".output").text("It's a tie!");
   }
