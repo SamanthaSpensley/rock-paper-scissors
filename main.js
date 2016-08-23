@@ -16,7 +16,7 @@ $('.button').click(function(){
   if(userChoice === compChoice) {
     $(".output").text("It's a tie!");
   }
-  else if (compChoice === "rock" && userChoice === "paper" || compChoice === "paper" && userChoice === "scissors" || compChoice === "scissor" && userChoice === "rock") {
+  else if (compChoice === "rock" && userChoice === "paper" || compChoice === "paper" && userChoice === "scissors" || compChoice === "scissors" && userChoice === "rock") {
     $(".output").text("You win!");
     wins += 1;
   }
